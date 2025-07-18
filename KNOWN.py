@@ -118,17 +118,17 @@ BiasSet=[]
 class WeightForecasting(tensorflow.keras.callbacks.Callback):
     def __init__(self):
         super(WeightForecasting, self).__init__()
-        self.model2 = WNN(5)
+        self.model2 = KNOWN(5)
         self.model2.compile(loss='mae', optimizer=Adam(),metrics=['mae'])
-        self.model2.load_weights('NWNN_Conv_13.h5')
+        self.model2.load_weights('NKNOWN_Conv_13.h5')
         
-        self.model3 = WNN(5)
+        self.model3 = KNOWN(5)
         self.model3.compile(loss='mae', optimizer=Adam(),metrics=['mae'])
-        self.model3.load_weights('NWNN_FC_13.h5')						
+        self.model3.load_weights('NKNOWN_FC_13.h5')						
 
-        self.model4 = WNN(5)
+        self.model4 = KNOWN(5)
         self.model4.compile(loss='mae', optimizer=Adam(),metrics=['mae'])       
-        self.model4.load_weights('NWNN_Bias_13.h5')
+        self.model4.load_weights('NKNOWN_Bias_13.h5')
         self.cnt=0
 
         
