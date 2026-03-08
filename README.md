@@ -9,7 +9,7 @@ Official code release for **“Learning from Oblivion: Predicting Knowledge-Over
 
 Pre-trained weights have become a cornerstone of modern deep learning, enabling efficient knowledge transfer and improving downstream task performance, especially in data-scarce scenarios. However, a fundamental question remains: how can we obtain better pre-trained weights that encapsulate more knowledge beyond the given dataset? In this work, we introduce **KNowledge-Overflowed Weights (KNOW)** prediction, a novel strategy that leverages structured forgetting and its inversion to synthesize knowledge-enriched weights. Our key insight is that sequential fine-tuning on progressively downsized datasets induces a structured forgetting process, which can be modeled and reversed to recover knowledge as if trained on a larger dataset. We construct a dataset of weight transitions governed by this controlled forgetting and employ meta-learning to model weight prediction effectively. Specifically, our **KNowledge-Overflowed Weights Nowcaster (KNOWN)** acts as a hyper-model that learns the general evolution of weights and predicts enhanced weights with improved generalization. Extensive experiments across diverse datasets and architectures demonstrate that KNOW prediction consistently outperforms Na\"ive fine-tuning and simple weight prediction, leading to superior downstream performance. Our work provides a new perspective on reinterpreting forgetting dynamics to push the limits of knowledge transfer.
 
-![alt text](https://github.com/jjh6297/KNOW/blob/main/images/Schematic1.png?raw=true)
+![alt text](https://github.com/jjh6297/KNOW/blob/main/images/figure1.png?raw=true)
 
 
 
